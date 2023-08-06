@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 {
     public GameObject firstPerson;
     public GameObject thirdPerson;
+    int cmode = 3;
   
     // Start is called before the first frame update
     void Start()
@@ -18,17 +19,39 @@ public class CameraController : MonoBehaviour
     {
         // If Right mouse button is clicked, switch to first person view. Else, switch back to third person view.
        
-        if (Input.GetMouseButton(1))
+        //if (Input.GetMouseButton(1))
+        //{
+        //    setCameraMode(1);
+        //}
+        //else
+        //{
+        //    setCameraMode(3);
+        //}
+        
+    }
+
+    public void setCameraMode(int mode)
+    {
+        if(mode == 1)
         {
-            Debug.Log("RIGHT");
+            Debug.Log("First person activated");
+            cmode = 1;
             firstPerson.SetActive(true);
             thirdPerson.SetActive(false);
         }
         else
         {
+            Debug.Log("Third person activated");
+            cmode = 3;
             thirdPerson.SetActive(true);
             firstPerson.SetActive(false);
         }
-        
+    }
+
+    public void toggleCamera()
+    {
+        Debug.Log(cmode);
+        if (cmode == 1) setCameraMode(3);
+        else setCameraMode(1);
     }
 }

@@ -54,7 +54,7 @@ public class WeaponController : MonoBehaviour
 
     }
 
-    void Fire()
+    public void Fire()
     {
         Debug.Log("Dishum");
         // Firing the weapon if current time has exceeded nextLaunch time
@@ -69,5 +69,10 @@ public class WeaponController : MonoBehaviour
     void UpdateNextLaunchTime()
     {
         nextLaunch = Time.time + FireRate[i];
+    }
+
+    public void updateWeapon(int weaponNum)
+    {
+        i = weaponNum;
     }
 }
