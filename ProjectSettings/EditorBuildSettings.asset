@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/SyntyStudios/PolygonCity/Scenes/Demo.unity
+    guid: 35299a6a99d6dfe4bb709527ba95aab0
+  - enabled: 1
+    path: Assets/save.unity
+    guid: 5495ee88d63eb294bb07e1b96aa60107
   m_configObjects: {}
